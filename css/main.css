@@ -468,6 +468,7 @@ button:focus {
 .navbar-brand {
   position: relative;
   padding: 0px;
+  color: #fff;
 }
 
 .top-nav-collapse {

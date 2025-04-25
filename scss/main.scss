@@ -534,6 +534,8 @@ $letter-spacing: 0px;
 	    background: #f8f9fa;
 	    color: $preset;
 	  }
+	  
+	  
 	}
 
 /* ==========================================================================
@@ -1144,10 +1146,13 @@ p{
       color: $preset;
     }
   }
+}  
+a.navbar-brand{
+	color: #000 !important;
+  
+  
+
+  
+  }
+
 }
-}
-
-
-
-
-
