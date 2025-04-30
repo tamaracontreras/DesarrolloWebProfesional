@@ -702,13 +702,13 @@
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <input type="text" placeholder="Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
+                        <input type="text" placeholder="Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
                         <div class="help-block with-errors"></div>
                       </div> 
                     </div>
                     <div class="col-md-12">
                       <div class="form-group"> 
-                        <textarea class="form-control" id="message" placeholder="Mensaje" rows="8" data-error="Write your message" required></textarea>
+                        <textarea class="form-control"  name="message" id="message" placeholder="Mensaje" rows="8" data-error="Write your message" required></textarea>
                         <div class="help-block with-errors"></div>
                       </div>
                       <div class="submit-button text-center">
@@ -791,6 +791,14 @@
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>   
     <script src="js/main.js"></script>
+    <!-- EmailJS -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("M8J3OP9qgND_k82ZQ"); // 👈 reemplaza con tu public key de EmailJS
+  })();
+</script>
+
 
   </body>
 </html>

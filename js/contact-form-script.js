@@ -11,28 +11,18 @@ $("#contactForm").validator().on("submit", function (event) {
 });
 
 
-function submitForm(){
-    // Initiate Variables With Form Content
-    var name = $("#name").val();
-    var email = $("#email").val();
-    var msg_subject = $("#msg_subject").val();
-    var message = $("#message").val();
+function submitForm() {
+    var form = document.getElementById("contactForm");
 
-
-    $.ajax({
-        type: "POST",
-        url: "php/form-process.php",
-        data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&message=" + message,
-        success : function(text){
-            if (text == "success"){
-                formSuccess();
-            } else {
-                formError();
-                submitMSG(false,text);
-            }
-        }
-    });
+    emailjs.sendForm("service_r5s5pfq", "template_qh862aw", form)
+      .then(function() {
+          formSuccess();
+      }, function(error) {
+          formError();
+          submitMSG(false, "Error al enviar: " + error.text);
+      });
 }
+
 
 function formSuccess(){
     $("#contactForm")[0].reset();
