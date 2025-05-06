@@ -26,7 +26,7 @@ function submitForm() {
 
 function formSuccess(){
     $("#contactForm")[0].reset();
-    submitMSG(true, "Message Submitted!")
+    submitMSG(true, "Mensaje enviado!")
 }
 
 function formError(){
@@ -37,9 +37,9 @@ function formError(){
 
 function submitMSG(valid, msg){
     if(valid){
-        var msgClasses = "h3 text-center tada animated text-success";
+        var msgClasses = "p text-center tada animated text-success";
     } else {
-        var msgClasses = "h3 text-center text-danger";
+        var msgClasses = "p text-center text-danger";
     }
     $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
 }
